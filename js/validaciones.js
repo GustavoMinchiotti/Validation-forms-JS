@@ -1,7 +1,10 @@
-export function valida(input) {
-  const tipoDeInput = input.dataset.tipo;
+export function valida(input) {   // esta fun recibe a input..
+
+  const tipoDeInput = input.dataset.tipo; // la var recibe por este método el valor dado por nos de tipo de input ejemplo "nacimiento"
+
+  // 
   if (validadores[tipoDeInput]) {
-    validadores[tipoDeInput](input);
+    validadores[tipoDeInput](input); // verifico dentro de esta fun de validadores si existe ese tipo de input
   }
 
   if (input.validity.valid) {
@@ -75,14 +78,15 @@ function mostrarMensajeDeError(tipoDeInput, input) {
 
 function validarNacimiento(input) {
   const fechaCliente = new Date(input.value);
-  let mensaje = "";
+  let mensaje = ""; // crea mensaje vacío.. si no se cumple el if el valor cambia al mensaje "debes tener..."
   if (!mayorDeEdad(fechaCliente)) {
     mensaje = "Debes tener al menos 18 años de edad";
   }
 
-  input.setCustomValidity(mensaje);
+  input.setCustomValidity(mensaje); //El método SetCustomValidity define el mensaje de validación personalizado para el elemento seleccionado.
 }
 
+//? En esta función a la fecha que obtiene le suma 18 años, si resulta que la diferencia es mayor a 0 SI tiene mas de 18.
 function mayorDeEdad(fecha) {
   const fechaActual = new Date();
   const diferenciaFechas = new Date(

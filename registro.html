@@ -34,29 +34,37 @@
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
 
-                    <div class="input-container">
+                    <div class="input-container"> <!--? los caracteres dentro de required pattern son una REGEX -- en el title le digo los parámetros al usuario -->
                         <input name="password" id="password" class="input" type="password" placeholder="Contraseña" 
+                        
                         required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?!.*[ !@#$%^&*_=+-]).{6,12}$" 
+                    
                         title="Al menos 6 caracteres, máximo 12, debe contener una letra minúscula, una letra mayúscula, 
-                        un número y no puede contener caracteres especiales." data-tipo="password">
+                        un número y no puede contener caracteres especiales." 
+                        
+                        data-tipo="password">
                         <label class="input-label" for="password">Contraseña</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
 
                 </fieldset>
+
                 <fieldset>
                     <legend class="form__label">Información personal</legend>
                     <div class="input-container">
+                        <!--? tipo de dato fecha --   la validación se hará en JS   -->
                         <input name="birth" id="birth" class="input" type="date" placeholder="Fecha de nacimiento" required data-tipo="nacimiento">
                         <label class="input-label" for="birth">Fecha de nacimiento</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
+                    
                     <div class="input-container">
-                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico" pattern="\d{10}" required minlegth="10" maxlength="10" data-tipo="numero">
+                        <input name="phoneNumber" id="phoneNumber" class="input" type="text" placeholder="Número telefónico" pattern="\d{10}" required minlength="10" maxlength="10" data-tipo="numero">
                         <label class="input-label" for="phoneNumber">Número telefónico</label>
                         <span class="input-message-error">Este campo no es valido</span>
                     </div>
                 </fieldset>
+
                 <fieldset>
                     <legend class="form__label">Dirección</legend>
                     <div class="input-container">
