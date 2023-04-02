@@ -66,6 +66,21 @@ Luego creo un objeto: que va a tener como llave al tipo de `data ""`, por cada t
 de los validadores.
 
 
+El método `.validity` nos devuelve un objeto
+
+![img_2.png](img_2.png)
+
+entre sus atributos esta `valid` que nos dice si esta o no validado, por ello este if nos dice:
+
+![img_3.png](img_3.png)
+
+si es valido quiero que quite la clase, sino (else) quiero que ponga la clase css de error. **¡¡¡importante la clase se aplica
+al padre!!!**
+
+https://app.aluracursos.com/course/javascript-web-validacion-formularios-html5/task/77542  -- clase de mensaje de error
+
+https://developer.mozilla.org/en-US/docs/Web/API/ValidityState  -- documentación de validaciones
+
 
 
 
