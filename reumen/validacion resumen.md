@@ -81,6 +81,12 @@ https://app.aluracursos.com/course/javascript-web-validacion-formularios-html5/t
 
 https://developer.mozilla.org/en-US/docs/Web/API/ValidityState  -- documentación de validaciones
 
+### Las clases de este curso no son claras 
+
+## vercel app
+
+https://app.aluracursos.com/course/javascript-web-validacion-formularios-html5/task/77547
+
 
 
 
